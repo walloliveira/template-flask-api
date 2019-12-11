@@ -1,0 +1,16 @@
+version: '3'
+services:
+  database:
+    image: postgres:11.5-alpine
+    restart: always
+    volumes:
+      - flaskapidb:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: flaskapi
+      POSTGRES_PASSWORD: 123mudar
+      POSTGRES_DB: flaskapi
+      TZ: America/Sao_Paulo
+volumes:
+  flaskapidb:
