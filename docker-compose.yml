@@ -1,6 +1,6 @@
 version: '3'
 services:
-  database:
+  database_1:
     image: postgres:11.5-alpine
     restart: always
     volumes:

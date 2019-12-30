@@ -17,7 +17,7 @@ class TestUsersViews(AbstractViewUnitTest):
 
         # Assertions
         self.assertEqual(len(data), 1)
-        self.assertTrue(get_user_mock.called)
+        get_user_mock.assert_called_once()
 
     @patch('app.domains.users.views.get_user_by_id')
     def test_get_user_by_id_should_be_1(self, get_user_by_id_mock):

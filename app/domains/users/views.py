@@ -24,7 +24,7 @@ def put(id):
 
 
 @app_users.route('/users', methods=['GET'])
-def get():
+def get() -> tuple:
     return jsonify([user.serialize() for user in get_users()]), 200
 
 

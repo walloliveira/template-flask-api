@@ -1,6 +1,7 @@
 import unittest
 
 from app import create_app, db
+from app.domains.users.models import User
 
 
 class AbstractViewUnitTest(unittest.TestCase):
